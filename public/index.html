@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>simpleGallery.js</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="simple-gallery.css" media="screen" charset="utf-8">
+		<style media="screen">
+			body {
+				background-color: #F9F9F9;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="form-upload" enctype="multipart/form-data" method="POST" action="/upload">
+		  <input type="hidden" name="gallery" value='[{"url":"http://localhost:3000/tmp/9d018eb5a8db698442ac39b3c6e115e8","title":"1"},{"url":"http://localhost:3000/tmp/146cb3c9407babc52c04938ae0b2041c","title":"2"},{"url":"http://localhost:3000/tmp/3860c14bff72e89b6204566742e6e9e7","title":"3"}]'>
+		  <label for="">Image Gallery</label>
+			<div class="input-upload btn">
+				<span class="fa fa-cloud-upload"></span> Upload
+				<input class="upload" type="file" multiple="multiple" accept="image/*">
+			</div>
+		  <div class="gallery-container"></div>
+		</form>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
+		<script src="simple-gallery.js"></script>
+		<script type="text/javascript">
+			new SimpleGallery('.form-upload');
+		</script>
+	</body>
+</html>
